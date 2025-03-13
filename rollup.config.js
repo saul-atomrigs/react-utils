@@ -1,15 +1,23 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
+import resolve from '@rollup/plugin-node-resolve';
 
 export default {
   input: 'src/index.js',
-  output: {
-    dir: 'dist',
-    format: 'esm',
-  },
+  output: [
+    {
+      file: 'dist/index.js',
+      format: 'cjs',
+    },
+    {
+      file: 'dist/index.esm.js',
+      format: 'esm',
+    },
+  ],
   plugins: [
+    resolve(),
     typescript({
       tsconfig: './tsconfig.json',
-      outDir: 'dist',
+      useTsconfigDeclarationDir: true,
     }),
   ],
 };
