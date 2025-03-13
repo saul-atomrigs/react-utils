@@ -1,6 +1,7 @@
 {
   "name": "@saul-atomrigs/react",
   "version": "0.1.0",
+  "type": "module",
   "description": "React utils for faster project development",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -48,6 +49,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^4.9.6",
     "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.8.1",
     "typescript": "^5.3.3"
   },
   "browserslist": [
