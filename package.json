@@ -1,0 +1,71 @@
+{
+  "name": "@saul-atomrigs/react",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "React utils for faster project development",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "vitest run",
+    "lint": "eslint src/*.{ts,tsx}",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saul-atomrigs/react-utils.git"
+  },
+  "keywords": [
+    "react",
+    "context",
+    "typescript",
+    "your"
+  ],
+  "author": "saul-atomrigs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saul-atomrigs/react-utils/issues"
+  },
+  "homepage": "https://github.com/saul-atomrigs/react-utils#readme",
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^17.0.0 || ^18.0.0",
+    "@types/react-dom": "^17.0.0 || ^18.0.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "jsdom": "^26.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
