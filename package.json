@@ -6,13 +6,16 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rollup -c",
     "test": "vitest run",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint src/*.{ts,tsx}",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint"
   },
