@@ -24,6 +24,7 @@ describe('createContext', () => {
       );
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const wrapper = render(
       <TestProvider value='hello' count={42}>
         <TestConsumer />
@@ -41,6 +42,7 @@ describe('createContext', () => {
     }
 
     const defaultContext = { value: 'default' };
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [TestProvider, useTestContext] = createContext<TestContextType>(
       'Test',
       defaultContext
