@@ -1,11 +1,12 @@
-import React, { Suspense, type PropsWithChildren } from 'react';
+import React, { Suspense } from 'react';
 import { useQueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
 
 type QueryAsyncBoundaryProps = {
   pendingFallback: React.ReactNode;
   rejecterFallback?: React.ReactNode;
-} & PropsWithChildren;
+  children: React.ReactNode;
+};
 
 /**
  * reference: https://github.com/ssi02014/react-query-tutorial?tab=readme-ov-file#usequeryerrorresetboundary
