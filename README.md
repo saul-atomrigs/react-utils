@@ -6,12 +6,14 @@ A collection of abstracted utilities for react applications
 
 ### `createContext`
 
+Abstracted boilerplate code for context API.
+
 ```tsx
 import { createContext } from '@saul-atomrigs/react';
 
-const [ThemeProvider, useThemeContext] = createContext<{ mode: 'light' | 'dark' }>(
-  'Theme'
-);
+const [ThemeProvider, useThemeContext] = createContext<{
+  mode: 'light' | 'dark';
+}>('Theme');
 
 function ChildComponent() {
   const theme = useThemeContext();
@@ -24,6 +26,23 @@ function App() {
     <ThemeProvider mode='light'>
       <ChildComponent />
     </ThemeProvider>
+  );
+}
+```
+
+### `QueryAsyncBoundary`
+
+Suspense + ErrorBoundary + useQueryErrorResetBoundary (react-query).
+If no rejectedFallback is provided as props, it will render the reset (Try again) button.
+
+```tsx
+import { QueryAsyncBoundary } from '@saul-atomrigs/react';
+
+function App() {
+  return (
+    <QueryAsyncBoundary rejectedFallback={} pendingFallback={}>
+      <DataComponent />
+    </QueryAsyncBoundary>
   );
 }
 ```
