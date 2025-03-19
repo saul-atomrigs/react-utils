@@ -2,6 +2,10 @@
 
 A collection of abstracted utilities for react applications
 
+```
+npm i @saul-atomrigs/react
+```
+
 ## Usage
 
 ### `createContext`
