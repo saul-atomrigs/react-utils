@@ -9,12 +9,12 @@ A collection of abstracted utilities for react applications
 ```tsx
 import { createContext } from '@saul-atomrigs/react';
 
-const [ThemeProvider, useTheme] = createContext<{ mode: 'light' | 'dark' }>(
+const [ThemeProvider, useThemeContext] = createContext<{ mode: 'light' | 'dark' }>(
   'Theme'
 );
 
 function ChildComponent() {
-  const theme = useTheme();
+  const theme = useThemeContext();
   console.log('🚀 ~ ChildComponent ~ theme:', theme);
   return <p>current theme: {theme.mode}</p>;
 }
