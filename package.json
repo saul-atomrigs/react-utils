@@ -19,7 +19,11 @@
     "url": "https://github.com/saul-atomrigs/react-utils/issues"
   },
   "homepage": "https://github.com/saul-atomrigs/react-utils#readme",
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
   "devDependencies": {
+    "@types/react": "^18.0.0",
     "eslint": "^9.22.0",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
