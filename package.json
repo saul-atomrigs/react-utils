@@ -4,7 +4,7 @@
   "description": "Utilities for React applications",
   "main": "index.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup index.ts --format cjs,esm --dts",
     "lint": "eslint src --fix",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
