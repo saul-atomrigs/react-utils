@@ -1,31 +1,29 @@
-# react-utils
+# @saul-atomrigs/react
 
-리액트 유틸 함수 모음 라이브러리
+A collection of abstracted utilities for react applications
+
+## Usage
 
 ### `createContext`
 
-인터페이스
+```tsx
+import { createContext } from '@saul-atomrigs/react';
 
-```ts
-// index.d.ts
-export function createContext<ContextValueType extends object | null>(
-  rootComponentName: string,
-  defaultContext?: ContextValueType
-): readonly [
-  Provider: React.FC<ContextValueType & { children: React.ReactNode }>,
-  useContext: () => ContextValueType
-];
-```
+const [ThemeProvider, useTheme] = createContext<{ mode: 'light' | 'dark' }>(
+  'Theme'
+);
 
-### `QueryAsyncBoundary`
+function ChildComponent() {
+  const theme = useTheme();
+  console.log('🚀 ~ ChildComponent ~ theme:', theme);
+  return <p>current theme: {theme.mode}</p>;
+}
 
-인터페이스
-
-```ts
-// index.d.ts
-export function QueryAsyncBoundary(props: {
-  pendingFallback: React.ReactNode;
-  rejecterFallback?: React.ReactNode;
-  children: React.ReactNode;
-}): JSX.Element;
+function App() {
+  return (
+    <ThemeProvider mode='light'>
+      <ChildComponent />
+    </ThemeProvider>
+  );
+}
 ```
