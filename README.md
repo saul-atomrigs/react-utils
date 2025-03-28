@@ -50,3 +50,14 @@ function App() {
   );
 }
 ```
+
+### `tryCatch`
+
+A utility function that wraps asynchronous operations and returns a standardized result object.
+This helps to handle promise-based operations in a consistent way, without try-catch blocks everywhere.
+
+```tsx
+import { tryCatch } from '@saul-atomrigs/react';
+
+const { data: user, error } = await tryCatch(fetchUser);
+```
