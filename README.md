@@ -61,3 +61,24 @@ import { tryCatch } from '@saul-atomrigs/react';
 
 const { data: user, error } = await tryCatch(fetchUser);
 ```
+
+### `If`
+
+A conditional rendering component that helps to write cleaner JSX by eliminating ternary operators or && conditions.
+
+```tsx
+import { If } from '@saul-atomrigs/react';
+
+function App() {
+  const user = {
+    isLoggedIn: true,
+    name: 'John',
+  };
+
+  return (
+    <If condition={user.isLoggedIn}>
+      <p>환영합니다, {user.name}님!</p>
+    </If>
+  );
+}
+```
